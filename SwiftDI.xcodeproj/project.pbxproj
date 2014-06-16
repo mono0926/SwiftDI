@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE2DBC40194E6B1200BEDF82 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2DBC3F194E6B1200BEDF82 /* Container.swift */; };
 		FEF0071B194E6958000940F4 /* SwiftDI.h in Headers */ = {isa = PBXBuildFile; fileRef = FEF0071A194E6958000940F4 /* SwiftDI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FEF00721194E6958000940F4 /* SwiftDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEF00715194E6958000940F4 /* SwiftDI.framework */; };
 		FEF00728194E6958000940F4 /* SwiftDITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF00727194E6958000940F4 /* SwiftDITests.swift */; };
@@ -61,6 +62,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FE2DBC3F194E6B1200BEDF82 /* Container.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		FEF00715194E6958000940F4 /* SwiftDI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftDI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEF00719194E6958000940F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FEF0071A194E6958000940F4 /* SwiftDI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftDI.h; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 			children = (
 				FEF0071A194E6958000940F4 /* SwiftDI.h */,
 				FEF00718194E6958000940F4 /* Supporting Files */,
+				FE2DBC3F194E6B1200BEDF82 /* Container.swift */,
 			);
 			path = SwiftDI;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE2DBC40194E6B1200BEDF82 /* Container.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +488,7 @@
 		FEF0072C194E6958000940F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -495,12 +500,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		FEF0072D194E6958000940F4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -650,6 +657,7 @@
 				FEF0072D194E6958000940F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FEF0072E194E6958000940F4 /* Build configuration list for PBXNativeTarget "SwiftDITests" */ = {
 			isa = XCConfigurationList;
@@ -658,6 +666,7 @@
 				FEF00730194E6958000940F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FEF00749194E6982000940F4 /* Build configuration list for PBXNativeTarget "SwiftDI-iOS" */ = {
 			isa = XCConfigurationList;
@@ -666,6 +675,7 @@
 				FEF0074B194E6982000940F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FEF0074C194E6982000940F4 /* Build configuration list for PBXNativeTarget "SwiftDI-iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -674,6 +684,7 @@
 				FEF0074E194E6982000940F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
