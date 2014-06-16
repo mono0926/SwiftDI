@@ -14,8 +14,9 @@ protocol IContainer {
 }
 
 class Container: IContainer {
+    // TODO: later
+    var classMapping = Dictionary<String, () -> AnyObject>()
     func register<T>(_: () -> T) {
-        
     }
     func resolve<T>() -> T? {
         return nil
