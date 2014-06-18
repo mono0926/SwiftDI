@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 mono. All rights reserved.
 //
 
+/*
 import Quick
 import SwiftDI
 
@@ -28,3 +29,4 @@ class TableOfContentsSpec: QuickSpec {
         }
     }
 }
+*/

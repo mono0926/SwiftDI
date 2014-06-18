@@ -7,12 +7,13 @@
 //
 
 import XCTest
+import SwiftDI
 
-class SwiftDITests: XCTestCase {
-    
+class SwiftDITests: XCTestCase {    
+    var target: IContainer?
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        target = Container()
     }
     
     override func tearDown() {
@@ -21,15 +22,9 @@ class SwiftDITests: XCTestCase {
     }
     
     func testExample() {
-        // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock() {
-            // Put the code you want to measure the time of here.
-        }
+        target!.register { "AAA" }
+        let result: String? = target?.resolve()?
+        XCTAssertEqualObjects(result, "AAA")
     }
     
 }
